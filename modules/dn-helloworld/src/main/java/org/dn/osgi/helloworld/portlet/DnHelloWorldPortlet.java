@@ -1,7 +1,7 @@
 package org.dn.osgi.helloworld.portlet;
 
-import org.dn.osgi.helloworld.constants.DnHelloWorldPortletKeys;
-
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import java.io.IOException;
@@ -11,6 +11,7 @@ import javax.portlet.PortletException;
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
+import org.dn.osgi.helloworld.constants.DnHelloWorldPortletKeys;
 import org.osgi.service.component.annotations.Component;
 
 /**
@@ -36,8 +37,10 @@ public class DnHelloWorldPortlet extends MVCPortlet {
 			throws IOException, PortletException {
 		// TODO Auto-generated method stub
 		
-		System.out.println("HelloWorld Printed here.....");
+		_log.info("DnHelloWorld Printed here.....");
 		
 		super.doView(renderRequest, renderResponse);
 	}
+
+	private static Log _log = LogFactoryUtil.getLog(DnHelloWorldPortlet.class);
 }
