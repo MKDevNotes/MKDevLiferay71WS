@@ -1,0 +1,4 @@
+Bundle-Name: dn-helloworld
+Bundle-SymbolicName: org.dn.osgi.helloworld
+Bundle-Version: 1.0.0
+Export-Package: org.dn.osgi.helloworld.constants
